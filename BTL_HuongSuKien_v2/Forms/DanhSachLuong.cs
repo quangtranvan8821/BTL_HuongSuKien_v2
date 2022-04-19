@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_HuongSuKien_v2.Forms
 {
-    public partial class DanhSachNhanVien : Form
+    public partial class DanhSachLuong : Form
     {
-        public DanhSachNhanVien()
+        public DanhSachLuong()
         {
             InitializeComponent();
         }

@@ -16,5 +16,11 @@ namespace BTL_HuongSuKien_v2.Forms
         {
             InitializeComponent();
         }
+
+        //close form
+        private void clickQuayLai(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

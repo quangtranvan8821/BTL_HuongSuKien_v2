@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Luong.cs">
+    <Compile Include="Forms\DanhSachHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Luong.Designer.cs">
-      <DependentUpon>Luong.cs</DependentUpon>
+    <Compile Include="Forms\DanhSachHopDong.Designer.cs">
+      <DependentUpon>DanhSachHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DanhSachLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhSachLuong.Designer.cs">
+      <DependentUpon>DanhSachLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DanhSachNhanVien.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,24 @@
     <Compile Include="Forms\DanhSachPhongBan.Designer.cs">
       <DependentUpon>DanhSachPhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThongKeNhanVienTheoTuoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThongKeNhanVienTheoTuoi.Designer.cs">
+      <DependentUpon>ThongKeNhanVienTheoTuoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimKiemNhanVienTheoPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimKiemNhanVienTheoPhongBan.Designer.cs">
+      <DependentUpon>TimKiemNhanVienTheoPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimKiemNhanVienTheoTen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimKiemNhanVienTheoTen.Designer.cs">
+      <DependentUpon>TimKiemNhanVienTheoTen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,14 +96,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\DanhSachHopDong.resx">
+      <DependentUpon>DanhSachHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhSachNhanVien.resx">
       <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhSachPhongBan.resx">
       <DependentUpon>DanhSachPhongBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Luong.resx">
-      <DependentUpon>Luong.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DanhSachLuong.resx">
+      <DependentUpon>DanhSachLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThongKeNhanVienTheoTuoi.resx">
+      <DependentUpon>ThongKeNhanVienTheoTuoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimKiemNhanVienTheoPhongBan.resx">
+      <DependentUpon>TimKiemNhanVienTheoPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimKiemNhanVienTheoTen.resx">
+      <DependentUpon>TimKiemNhanVienTheoTen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>

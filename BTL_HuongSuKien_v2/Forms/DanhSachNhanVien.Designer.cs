@@ -299,6 +299,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 56;
             this.buttonQuayLai.Text = "<";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.Click += new System.EventHandler(this.clickQuayLai);
             // 
             // dateTimePickerNgaySinh
             // 
@@ -309,7 +310,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(303, 20);
             this.dateTimePickerNgaySinh.TabIndex = 57;
             // 
-            // NhanVien
+            // DanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -338,7 +339,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.textBoxTenNhanVien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewNhanVien);
-            this.Name = "NhanVien";
+            this.Name = "DanhSachNhanVien";
             this.Text = "Nhân viên";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);

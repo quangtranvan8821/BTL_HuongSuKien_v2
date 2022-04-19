@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace BTL_HuongSuKien_v2.Forms
 {
-    public partial class Luong : Form
+    public partial class TimKiemNhanVienTheoPhongBan : Form
     {
-        public Luong()
+        public TimKiemNhanVienTheoPhongBan()
         {
             InitializeComponent();
+        }
+
+        //close form
+        private void clickQuayLai(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
