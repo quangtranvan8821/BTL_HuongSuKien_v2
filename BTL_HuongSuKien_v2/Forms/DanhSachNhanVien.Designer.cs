@@ -42,8 +42,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.labelTenPhongBan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDiaChi = new System.Windows.Forms.TextBox();
-            this.textBoxMaNhanVien = new System.Windows.Forms.TextBox();
-            this.labelMaNhanVien = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelNgaySinh = new System.Windows.Forms.Label();
             this.labelTenNhanVien = new System.Windows.Forms.Label();
@@ -138,7 +136,7 @@ namespace BTL_HuongSuKien_v2.Forms
             "Phòng kế toán",
             "Phòng marketing",
             "Phòng kỹ thuật"});
-            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(159, 501);
+            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(159, 464);
             this.comboBoxTenPhongBan.Name = "comboBoxTenPhongBan";
             this.comboBoxTenPhongBan.Size = new System.Drawing.Size(303, 21);
             this.comboBoxTenPhongBan.TabIndex = 48;
@@ -151,7 +149,7 @@ namespace BTL_HuongSuKien_v2.Forms
             "Phó phòng",
             "Nhân viên",
             "Thực tập"});
-            this.comboBoxTenChucVu.Location = new System.Drawing.Point(159, 461);
+            this.comboBoxTenChucVu.Location = new System.Drawing.Point(159, 421);
             this.comboBoxTenChucVu.Name = "comboBoxTenChucVu";
             this.comboBoxTenChucVu.Size = new System.Drawing.Size(303, 21);
             this.comboBoxTenChucVu.TabIndex = 47;
@@ -160,7 +158,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.labelTenChucVu.AutoSize = true;
             this.labelTenChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenChucVu.Location = new System.Drawing.Point(29, 459);
+            this.labelTenChucVu.Location = new System.Drawing.Point(29, 422);
             this.labelTenChucVu.Name = "labelTenChucVu";
             this.labelTenChucVu.Size = new System.Drawing.Size(98, 20);
             this.labelTenChucVu.TabIndex = 46;
@@ -170,7 +168,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.labelTenPhongBan.AutoSize = true;
             this.labelTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenPhongBan.Location = new System.Drawing.Point(29, 503);
+            this.labelTenPhongBan.Location = new System.Drawing.Point(29, 462);
             this.labelTenPhongBan.Name = "labelTenPhongBan";
             this.labelTenPhongBan.Size = new System.Drawing.Size(120, 20);
             this.labelTenPhongBan.TabIndex = 45;
@@ -189,34 +187,16 @@ namespace BTL_HuongSuKien_v2.Forms
             // textBoxDiaChi
             // 
             this.textBoxDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiaChi.Location = new System.Drawing.Point(159, 420);
+            this.textBoxDiaChi.Location = new System.Drawing.Point(677, 342);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
-            this.textBoxDiaChi.Size = new System.Drawing.Size(303, 22);
+            this.textBoxDiaChi.Size = new System.Drawing.Size(192, 22);
             this.textBoxDiaChi.TabIndex = 43;
-            // 
-            // textBoxMaNhanVien
-            // 
-            this.textBoxMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaNhanVien.Location = new System.Drawing.Point(677, 342);
-            this.textBoxMaNhanVien.Name = "textBoxMaNhanVien";
-            this.textBoxMaNhanVien.Size = new System.Drawing.Size(192, 22);
-            this.textBoxMaNhanVien.TabIndex = 42;
-            // 
-            // labelMaNhanVien
-            // 
-            this.labelMaNhanVien.AutoSize = true;
-            this.labelMaNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaNhanVien.Location = new System.Drawing.Point(564, 344);
-            this.labelMaNhanVien.Name = "labelMaNhanVien";
-            this.labelMaNhanVien.Size = new System.Drawing.Size(107, 20);
-            this.labelMaNhanVien.TabIndex = 41;
-            this.labelMaNhanVien.Text = "Mã nhân viên:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 420);
+            this.label3.Location = new System.Drawing.Point(564, 344);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 40;
@@ -331,8 +311,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.labelTenPhongBan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDiaChi);
-            this.Controls.Add(this.textBoxMaNhanVien);
-            this.Controls.Add(this.labelMaNhanVien);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelNgaySinh);
             this.Controls.Add(this.labelTenNhanVien);
@@ -364,8 +342,6 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Label labelTenPhongBan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDiaChi;
-        private System.Windows.Forms.TextBox textBoxMaNhanVien;
-        private System.Windows.Forms.Label labelMaNhanVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelNgaySinh;
         private System.Windows.Forms.Label labelTenNhanVien;

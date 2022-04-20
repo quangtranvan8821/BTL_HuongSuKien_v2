@@ -15,7 +15,7 @@ namespace BTL_HuongSuKien_v2.ConnectDatabase
         public SqlConnection getConnect()
         {
             //connect string here
-            String strConn = ConfigurationManager.ConnectionStrings["connect"].ConnectionString;
+            String strConn = ConfigurationManager.ConnectionStrings["connectT"].ConnectionString;
             return new SqlConnection(strConn);
         }
         public DataTable getTable(String sql)
