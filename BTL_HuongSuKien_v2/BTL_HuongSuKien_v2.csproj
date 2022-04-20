@@ -33,9 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDatabase\ConnectDatabase.cs" />
+    <Compile Include="Forms\DanhSachChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhSachChucVu.Designer.cs">
+      <DependentUpon>DanhSachChucVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DanhSachHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +84,18 @@
     </Compile>
     <Compile Include="Forms\DanhSachPhongBan.Designer.cs">
       <DependentUpon>DanhSachPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DanhSachThoiGian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhSachThoiGian.Designer.cs">
+      <DependentUpon>DanhSachThoiGian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ThongKeNhanVienTheoTuoi.cs">
       <SubType>Form</SubType>
@@ -98,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\DanhSachChucVu.resx">
+      <DependentUpon>DanhSachChucVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhSachHopDong.resx">
       <DependentUpon>DanhSachHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DanhSachLuong.resx">
       <DependentUpon>DanhSachLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhSachThoiGian.resx">
+      <DependentUpon>DanhSachThoiGian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThongKeNhanVienTheoTuoi.resx">
       <DependentUpon>ThongKeNhanVienTheoTuoi.cs</DependentUpon>

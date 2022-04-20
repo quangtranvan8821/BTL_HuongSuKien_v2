@@ -29,6 +29,7 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSDT = new System.Windows.Forms.TextBox();
@@ -49,11 +50,13 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonIn = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewNhanVien
@@ -65,6 +68,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
             this.dataGridViewNhanVien.Size = new System.Drawing.Size(927, 233);
             this.dataGridViewNhanVien.TabIndex = 0;
+            this.dataGridViewNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNhanVien_CellClick);
             // 
             // label1
             // 
@@ -130,12 +134,6 @@ namespace BTL_HuongSuKien_v2.Forms
             // comboBoxTenPhongBan
             // 
             this.comboBoxTenPhongBan.FormattingEnabled = true;
-            this.comboBoxTenPhongBan.Items.AddRange(new object[] {
-            "Phòng kinh doanh",
-            "Phòng nhân sự",
-            "Phòng kế toán",
-            "Phòng marketing",
-            "Phòng kỹ thuật"});
             this.comboBoxTenPhongBan.Location = new System.Drawing.Point(159, 464);
             this.comboBoxTenPhongBan.Name = "comboBoxTenPhongBan";
             this.comboBoxTenPhongBan.Size = new System.Drawing.Size(303, 21);
@@ -144,11 +142,6 @@ namespace BTL_HuongSuKien_v2.Forms
             // comboBoxTenChucVu
             // 
             this.comboBoxTenChucVu.FormattingEnabled = true;
-            this.comboBoxTenChucVu.Items.AddRange(new object[] {
-            "Trưởng phòng",
-            "Phó phòng",
-            "Nhân viên",
-            "Thực tập"});
             this.comboBoxTenChucVu.Location = new System.Drawing.Point(159, 421);
             this.comboBoxTenChucVu.Name = "comboBoxTenChucVu";
             this.comboBoxTenChucVu.Size = new System.Drawing.Size(303, 21);
@@ -239,6 +232,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonThem.TabIndex = 52;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // buttonIn
             // 
@@ -259,16 +253,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonSua.TabIndex = 54;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = true;
-            // 
-            // buttonXoa
-            // 
-            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoa.Location = new System.Drawing.Point(866, 491);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(89, 31);
-            this.buttonXoa.TabIndex = 55;
-            this.buttonXoa.Text = "Xóa";
-            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // buttonQuayLai
             // 
@@ -290,15 +275,29 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(303, 20);
             this.dateTimePickerNgaySinh.TabIndex = 57;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.Location = new System.Drawing.Point(868, 491);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(85, 30);
+            this.buttonXoa.TabIndex = 58;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click_1);
+            // 
             // DanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.dateTimePickerNgaySinh);
             this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.buttonThem);
@@ -319,9 +318,11 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dataGridViewNhanVien);
             this.Name = "DanhSachNhanVien";
             this.Text = "Nhân viên";
+            this.Load += new System.EventHandler(this.DanhSachNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,8 +350,9 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button buttonXoa;
     }
 }

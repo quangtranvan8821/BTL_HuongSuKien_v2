@@ -22,5 +22,32 @@ namespace BTL_HuongSuKien_v2.Forms
         {
             Close();
         }
+
+        private void DanhSachPhongBan_Load(object sender, EventArgs e)
+        {
+            load_dataGridViewPhongBan();
+            Init_dsPhongban();
+        }
+        public void load_dataGridViewPhongBan()
+        {
+            ConnectDatabase.ConnectDatabase dt = new ConnectDatabase.ConnectDatabase();
+            string getdata = "select * from DanhSachPhongBan";
+            dataGridViewPhongBan.DataSource = dt.getTable(getdata);
+        }
+        private void Init_dsPhongban()
+        {
+            ConnectDatabase.ConnectDatabase db = new ConnectDatabase.ConnectDatabase();
+            DataTable tb = db.getTable("select ten_phong_ban from phong_ban");
+            comboBoxTenPhongBan.DataSource = tb;
+            comboBoxTenPhongBan.DisplayMember = "ten_phong_ban";
+            comboBoxTenPhongBan.ValueMember = "ten_phong_ban";
+
+            /*foreach (DataRow i in tb.Rows)
+            {
+                comboBoxTenPhongBan.Items.Add(i["ten_phong_ban"].ToString());
+            }*/
+            //comboBoxTenPhongBan.SelectedIndex = 0;
+        }
+
     }
 }

@@ -15,7 +15,7 @@ namespace BTL_HuongSuKien_v2.ConnectDatabase
         public SqlConnection getConnect()
         {
             //connect string here
-            String strConn = ConfigurationManager.ConnectionStrings["connectT"].ConnectionString;
+            String strConn = ConfigurationManager.ConnectionStrings["connectAll"].ConnectionString;
             return new SqlConnection(strConn);
         }
         public DataTable getTable(String sql)
@@ -31,7 +31,7 @@ namespace BTL_HuongSuKien_v2.ConnectDatabase
             conn.Close();
             return dt;
         }
-        public void ExcuteNonQuery(String sql)
+        public int  ExcuteNonQuery(String sql)
         {
             SqlConnection conn = getConnect();
             if (conn.State == ConnectionState.Closed)
@@ -39,10 +39,11 @@ namespace BTL_HuongSuKien_v2.ConnectDatabase
                 conn.Open();
             }
             SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
+            int soluong =cmd.ExecuteNonQuery();
             cmd.Dispose();
             cmd.Clone();
             conn.Close();
+            return soluong;
         }
         public String ExcuteScalar(String sql)
         {
