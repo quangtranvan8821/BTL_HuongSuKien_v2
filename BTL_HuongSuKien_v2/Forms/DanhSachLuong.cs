@@ -29,8 +29,7 @@ namespace BTL_HuongSuKien_v2.Forms
         {
             textBoxMaHopDong.Text = dataGridViewLuong.CurrentRow.Cells["Mã Hợp đồng"].Value.ToString();
             textBoxSoNgayCong.Text = dataGridViewLuong.CurrentRow.Cells["Số ngày công"].Value.ToString();
-            textBoxThang.Text = dataGridViewLuong.CurrentRow.Cells["Tháng"].Value.ToString();
-            textBoxNam.Text = dataGridViewLuong.CurrentRow.Cells["Năm"].Value.ToString();
+            textBoxMaThoiGian.Text = dataGridViewLuong.CurrentRow.Cells["Mã thời gian"].Value.ToString();
         }
 
         private void DanhSachLuong_Load(object sender, EventArgs e)
@@ -51,11 +50,8 @@ namespace BTL_HuongSuKien_v2.Forms
             {
                 check = check | checkTextBoxBlank(textBoxMaHopDong);
                 check = check | checkTextBoxBlank(textBoxSoNgayCong);
-                check = check | checkTextBoxBlank(textBoxNam);
-                check = check | checkTextBoxBlank(textBoxThang);
-                int idthoigian = getidThoiGian(Convert.ToInt32(textBoxThang.Text), Convert.ToInt32(textBoxNam.Text));
-                check = check | (idthoigian <1 ? true : false);
-
+                check = check | checkTextBoxBlank(textBoxMaThoiGian);
+                
 
                 ConnectDatabase.ConnectDatabase connectDatabase = new ConnectDatabase.ConnectDatabase();
                 if (check == false)
@@ -70,7 +66,7 @@ namespace BTL_HuongSuKien_v2.Forms
                     cmd.CommandText = @"ThemLuong";
 
                     cmd.Parameters.AddWithValue("@id_hop_dong", textBoxMaHopDong.Text);
-                    cmd.Parameters.AddWithValue("@id_thoi_gian",idthoigian);
+                    cmd.Parameters.AddWithValue("@id_thoi_gian",textBoxMaThoiGian.Text);
                     cmd.Parameters.AddWithValue("@ngay_cong", textBoxSoNgayCong.Text);
 
 
@@ -99,49 +95,7 @@ namespace BTL_HuongSuKien_v2.Forms
                 MessageBox.Show(i.Message);
             }
         }
-        public int getidThoiGian(int thang, int nam)
-        {
-            try
-            {
-                /*string cont = ConfigurationManager.ConnectionStrings["connectAll"].ConnectionString;
-                SqlConnection cnt = new SqlConnection(cont);
-                cnt.Open();
-                SqlCommand cmd = new SqlCommand("TimID_ThoiGian",cnt);
-               // cmd.Connection = cnt;
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                //  cmd.CommandText = @"TimID_ThoiGian";
-                MessageBox.Show(thang.ToString() + nam.ToString());
-                cmd.Parameters.AddWithValue("@thang", thang);
-                cmd.Parameters.AddWithValue("@nam", nam);*/
-                ConnectDatabase.ConnectDatabase connectDatabase = new ConnectDatabase.ConnectDatabase();
-                DataTable dataTable = new DataTable();
-                string s = "select id form thoi_gian where thang ="+thang+" and nam ="+nam;
-                connectDatabase.getTable(s);
-                int i = 0;
-                foreach (DataRow j in dataTable.Rows)
-                {
-                    i++;
-                }
-/*                int i = cmd.ExecuteNonQuery();*/
-                if (i > 0)
-                {
-                    int id = Convert.ToInt32(connectDatabase.ExcuteScalar(s));
-                    return id;
-                }
-                else
-                {
-                    errorProvider1.SetError(textBoxThang, "tháng năm không tồn tại trong database!");
-                    MessageBox.Show(i.ToString());
-                    return 0;
-                }
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.ToString());
-            }
-            return 0;
-
-        }
+        
         public bool checkTextBoxBlank(TextBox txtbox)
         {
             if (txtbox.Text == "")
@@ -159,8 +113,8 @@ namespace BTL_HuongSuKien_v2.Forms
         {
             try
             {
-                int idthoigian = getidThoiGian(Convert.ToInt32(textBoxThang.Text), Convert.ToInt32(textBoxNam.Text));
-                bool check = (idthoigian < 1 ? false: true);
+                
+                bool check = false;
                 if (check == false) {
                     ConnectDatabase.ConnectDatabase connectDatabase = new ConnectDatabase.ConnectDatabase();
                     int ma = int.Parse(dataGridViewLuong.CurrentRow.Cells["Mã lương"].Value.ToString());
@@ -173,7 +127,7 @@ namespace BTL_HuongSuKien_v2.Forms
                     cmd.CommandText = @"SuaLuong";
                     cmd.Parameters.AddWithValue("@id", ma);
                     cmd.Parameters.AddWithValue("@id_hop_dong", textBoxMaHopDong.Text);
-                    cmd.Parameters.AddWithValue("@id_thoi_gian",idthoigian);
+                    cmd.Parameters.AddWithValue("@id_thoi_gian",textBoxMaThoiGian.Text);
                     cmd.Parameters.AddWithValue("@ngay_cong", textBoxSoNgayCong.Text);
 
                     /*    @id int,

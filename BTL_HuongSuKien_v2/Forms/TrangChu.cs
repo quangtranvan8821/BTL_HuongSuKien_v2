@@ -17,75 +17,80 @@ namespace BTL_HuongSuKien_v2.Forms
             InitializeComponent();
         }
 
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-        //open NhanVien form
-        private void clickNhanVien(object sender, EventArgs e)
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DanhSachNhanVien danhSachNhanVien = new DanhSachNhanVien();
-            /*danhSachNhanVien.MdiParent = this;*/
+            danhSachNhanVien.MdiParent = this;
             danhSachNhanVien.Show();
-
-
         }
 
-        // openDanhSachPhongBan
-        private void clickPhongBan(object sender, EventArgs e)
+        private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DanhSachPhongBan  danhSachPhongBan = new DanhSachPhongBan();
-           // danhSachPhongBan.MdiParent = this;
+            DanhSachPhongBan danhSachPhongBan = new DanhSachPhongBan();
+             danhSachPhongBan.MdiParent = this;
             danhSachPhongBan.Show();
-        }
-
-        //open DanhSachLuong
-        private void clickLuong(object sender, EventArgs e)
-        {
-            DanhSachLuong danhSachLuong = new DanhSachLuong();
-           // danhSachLuong.MdiParent = this;
-            danhSachLuong.Show();
-        }
-
-        //open DanhSachHopDong
-        private void clickHopDong(object sender, EventArgs e)
-        {
-            DanhSachHopDong danhSachHopDong = new DanhSachHopDong();
-          //  danhSachHopDong.MdiParent = this;
-            danhSachHopDong.Show();
-        }
-
-        private void clickTimKiemNhanVienTheoTen(object sender, EventArgs e)
-        {
-            TimKiemNhanVienTheoTen timKiemNhanVienTheoTen = new TimKiemNhanVienTheoTen();
-           // timKiemNhanVienTheoTen.MdiParent = this;
-            timKiemNhanVienTheoTen.Show();
-        }
-
-        private void clickTimKiemNhanVienPhongBan(object sender, EventArgs e)
-        {
-            TimKiemNhanVienTheoPhongBan timKiemNhanVienTheoPhongBan = new TimKiemNhanVienTheoPhongBan();
-           // timKiemNhanVienTheoPhongBan.MdiParent = this;
-            timKiemNhanVienTheoPhongBan.Show();
-        }
-
-        private void clickThongKeTheoTuoi(object sender, EventArgs e)
-        {
-            ThongKeNhanVienTheoTuoi thongKeNhanVienTheoTuoi = new ThongKeNhanVienTheoTuoi();
-          //  thongKeNhanVienTheoTuoi.MdiParent = this;
-            thongKeNhanVienTheoTuoi.Show();
         }
 
         private void chứcVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DanhSachChucVu danhSachChucVu = new DanhSachChucVu();
-/*            danhSachChucVu.MdiParent = this;*/
+             danhSachChucVu.MdiParent = this;
             danhSachChucVu.Show();
+        }
+
+        private void hợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachHopDong danhSachHopDong = new DanhSachHopDong();
+            danhSachHopDong.MdiParent = this;
+            danhSachHopDong.Show();
+        }
+
+        private void lươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhSachLuong danhSachLuong = new DanhSachLuong();
+            danhSachLuong.MdiParent = this;
+            danhSachLuong.Show();
         }
 
         private void thờiGianToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DanhSachThoiGian danhSachThoiGian = new DanhSachThoiGian();
-            /*danhSachThoiGian.MdiParent = this;*/
+            danhSachThoiGian.MdiParent = this;
             danhSachThoiGian.Show();
-            
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhânViênTheoTênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimKiemNhanVienTheoTen danhSachTheoTen = new TimKiemNhanVienTheoTen();
+            danhSachTheoTen.MdiParent = this;
+            danhSachTheoTen.Show();
+        }
+
+        private void nhânViênTheoPhòngBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimKiemNhanVienTheoPhongBan danhSachPhongBan = new TimKiemNhanVienTheoPhongBan();
+            danhSachPhongBan.MdiParent = this;
+            danhSachPhongBan.Show();
+        }
+
+        private void nhânViênTheoChứcVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhânViênTheoPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

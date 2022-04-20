@@ -29,17 +29,19 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonQuayLai = new System.Windows.Forms.Button();
-            this.buttonXemChiTiet = new System.Windows.Forms.Button();
             this.buttonIn = new System.Windows.Forms.Button();
             this.labelTenPhongBan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dataGridViewThoiGian = new System.Windows.Forms.DataGridView();
+            this.textBoxThang = new System.Windows.Forms.TextBox();
+            this.textBoxNam = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThoiGian)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonQuayLai
@@ -51,16 +53,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 79;
             this.buttonQuayLai.Text = "<";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
-            // 
-            // buttonXemChiTiet
-            // 
-            this.buttonXemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXemChiTiet.Location = new System.Drawing.Point(829, 490);
-            this.buttonXemChiTiet.Name = "buttonXemChiTiet";
-            this.buttonXemChiTiet.Size = new System.Drawing.Size(127, 31);
-            this.buttonXemChiTiet.TabIndex = 78;
-            this.buttonXemChiTiet.Text = "Xem chi tiết";
-            this.buttonXemChiTiet.UseVisualStyleBackColor = true;
             // 
             // buttonIn
             // 
@@ -76,7 +68,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.labelTenPhongBan.AutoSize = true;
             this.labelTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenPhongBan.Location = new System.Drawing.Point(36, 501);
+            this.labelTenPhongBan.Location = new System.Drawing.Point(25, 433);
             this.labelTenPhongBan.Name = "labelTenPhongBan";
             this.labelTenPhongBan.Size = new System.Drawing.Size(62, 20);
             this.labelTenPhongBan.TabIndex = 68;
@@ -92,35 +84,35 @@ namespace BTL_HuongSuKien_v2.Forms
             this.label1.TabIndex = 59;
             this.label1.Text = "Danh sách thời gian";
             // 
-            // dataGridViewNhanVien
+            // dataGridViewThoiGian
             // 
-            this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNhanVien.Location = new System.Drawing.Point(29, 81);
-            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
-            this.dataGridViewNhanVien.Size = new System.Drawing.Size(927, 369);
-            this.dataGridViewNhanVien.TabIndex = 58;
+            this.dataGridViewThoiGian.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewThoiGian.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewThoiGian.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewThoiGian.Location = new System.Drawing.Point(29, 81);
+            this.dataGridViewThoiGian.Name = "dataGridViewThoiGian";
+            this.dataGridViewThoiGian.Size = new System.Drawing.Size(927, 309);
+            this.dataGridViewThoiGian.TabIndex = 58;
             // 
-            // textBox1
+            // textBoxThang
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 501);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 80;
+            this.textBoxThang.Location = new System.Drawing.Point(111, 433);
+            this.textBoxThang.Name = "textBoxThang";
+            this.textBoxThang.Size = new System.Drawing.Size(144, 20);
+            this.textBoxThang.TabIndex = 80;
             // 
-            // textBox2
+            // textBoxNam
             // 
-            this.textBox2.Location = new System.Drawing.Point(339, 503);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 81;
+            this.textBoxNam.Location = new System.Drawing.Point(361, 433);
+            this.textBoxNam.Name = "textBoxNam";
+            this.textBoxNam.Size = new System.Drawing.Size(178, 20);
+            this.textBoxNam.TabIndex = 81;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(283, 501);
+            this.label2.Location = new System.Drawing.Point(281, 433);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 82;
@@ -129,12 +121,17 @@ namespace BTL_HuongSuKien_v2.Forms
             // buttonThem
             // 
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThem.Location = new System.Drawing.Point(661, 490);
+            this.buttonThem.Location = new System.Drawing.Point(829, 490);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(127, 31);
             this.buttonThem.TabIndex = 83;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // DanhSachThoiGian
             // 
@@ -144,17 +141,18 @@ namespace BTL_HuongSuKien_v2.Forms
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNam);
+            this.Controls.Add(this.textBoxThang);
             this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.buttonXemChiTiet);
             this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.labelTenPhongBan);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridViewNhanVien);
+            this.Controls.Add(this.dataGridViewThoiGian);
             this.Name = "DanhSachThoiGian";
             this.Text = "Thời gian";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
+            this.Load += new System.EventHandler(this.DanhSachThoiGian_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThoiGian)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,14 +160,14 @@ namespace BTL_HuongSuKien_v2.Forms
 
         #endregion
         private System.Windows.Forms.Button buttonQuayLai;
-        private System.Windows.Forms.Button buttonXemChiTiet;
         private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Label labelTenPhongBan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dataGridViewThoiGian;
+        private System.Windows.Forms.TextBox textBoxThang;
+        private System.Windows.Forms.TextBox textBoxNam;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

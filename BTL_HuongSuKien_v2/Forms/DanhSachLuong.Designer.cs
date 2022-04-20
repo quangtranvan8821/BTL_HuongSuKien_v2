@@ -36,15 +36,13 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewLuong = new System.Windows.Forms.DataGridView();
-            this.textBoxThang = new System.Windows.Forms.TextBox();
-            this.textBoxNam = new System.Windows.Forms.TextBox();
-            this.labelThang = new System.Windows.Forms.Label();
-            this.labelNam = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxMaHopDong = new System.Windows.Forms.TextBox();
             this.textBoxSoNgayCong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxMaThoiGian = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +61,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // buttonSua
             // 
             this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSua.Location = new System.Drawing.Point(642, 447);
+            this.buttonSua.Location = new System.Drawing.Point(867, 499);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(89, 31);
             this.buttonSua.TabIndex = 77;
@@ -84,7 +82,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // buttonThem
             // 
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThem.Location = new System.Drawing.Point(497, 447);
+            this.buttonThem.Location = new System.Drawing.Point(729, 499);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(89, 31);
             this.buttonThem.TabIndex = 75;
@@ -113,40 +111,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dataGridViewLuong.TabIndex = 58;
             this.dataGridViewLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLuong_CellClick);
             // 
-            // textBoxThang
-            // 
-            this.textBoxThang.Location = new System.Drawing.Point(592, 350);
-            this.textBoxThang.Name = "textBoxThang";
-            this.textBoxThang.Size = new System.Drawing.Size(139, 20);
-            this.textBoxThang.TabIndex = 80;
-            // 
-            // textBoxNam
-            // 
-            this.textBoxNam.Location = new System.Drawing.Point(592, 396);
-            this.textBoxNam.Name = "textBoxNam";
-            this.textBoxNam.Size = new System.Drawing.Size(141, 20);
-            this.textBoxNam.TabIndex = 81;
-            // 
-            // labelThang
-            // 
-            this.labelThang.AutoSize = true;
-            this.labelThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThang.Location = new System.Drawing.Point(528, 350);
-            this.labelThang.Name = "labelThang";
-            this.labelThang.Size = new System.Drawing.Size(58, 20);
-            this.labelThang.TabIndex = 82;
-            this.labelThang.Text = "Tháng:";
-            // 
-            // labelNam
-            // 
-            this.labelNam.AutoSize = true;
-            this.labelNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNam.Location = new System.Drawing.Point(528, 392);
-            this.labelNam.Name = "labelNam";
-            this.labelNam.Size = new System.Drawing.Size(46, 20);
-            this.labelNam.TabIndex = 83;
-            this.labelNam.Text = "Năm:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -166,7 +130,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             // textBoxSoNgayCong
             // 
-            this.textBoxSoNgayCong.Location = new System.Drawing.Point(151, 394);
+            this.textBoxSoNgayCong.Location = new System.Drawing.Point(651, 352);
             this.textBoxSoNgayCong.Name = "textBoxSoNgayCong";
             this.textBoxSoNgayCong.Size = new System.Drawing.Size(305, 20);
             this.textBoxSoNgayCong.TabIndex = 88;
@@ -175,7 +139,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 394);
+            this.label4.Location = new System.Drawing.Point(511, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 20);
             this.label4.TabIndex = 89;
@@ -185,20 +149,35 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 406);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 20);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Mã Thời Gian :";
+            // 
+            // textBoxMaThoiGian
+            // 
+            this.textBoxMaThoiGian.Location = new System.Drawing.Point(151, 406);
+            this.textBoxMaThoiGian.Name = "textBoxMaThoiGian";
+            this.textBoxMaThoiGian.Size = new System.Drawing.Size(305, 20);
+            this.textBoxMaThoiGian.TabIndex = 91;
+            // 
             // DanhSachLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.textBoxMaThoiGian);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxSoNgayCong);
             this.Controls.Add(this.textBoxMaHopDong);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelNam);
-            this.Controls.Add(this.labelThang);
-            this.Controls.Add(this.textBoxNam);
-            this.Controls.Add(this.textBoxThang);
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonIn);
@@ -223,14 +202,12 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewLuong;
-        private System.Windows.Forms.TextBox textBoxThang;
-        private System.Windows.Forms.TextBox textBoxNam;
-        private System.Windows.Forms.Label labelThang;
-        private System.Windows.Forms.Label labelNam;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxMaHopDong;
         private System.Windows.Forms.TextBox textBoxSoNgayCong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox textBoxMaThoiGian;
+        private System.Windows.Forms.Label label3;
     }
 }
