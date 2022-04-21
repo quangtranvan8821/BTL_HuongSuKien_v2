@@ -30,17 +30,14 @@ namespace BTL_HuongSuKien_v2.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonQuayLai = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonIn = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.labelNgayKetThuc = new System.Windows.Forms.Label();
             this.labelTenNhanVien = new System.Windows.Forms.Label();
             this.textBoxTenNhanVien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewHopDong = new System.Windows.Forms.DataGridView();
-            this.textBoxLoaiHopDong = new System.Windows.Forms.TextBox();
             this.textBoxDonGiaNgayCong = new System.Windows.Forms.TextBox();
             this.labelDonGiaNgayCong = new System.Windows.Forms.Label();
             this.buttonTimKiem = new System.Windows.Forms.Button();
@@ -49,20 +46,11 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonQuayLai = new System.Windows.Forms.Button();
+            this.comboBoxLoaiHopDong = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHopDong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonQuayLai
-            // 
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
-            this.buttonQuayLai.TabIndex = 79;
-            this.buttonQuayLai.Text = "<";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
-            this.buttonQuayLai.Click += new System.EventHandler(this.clickQuayLai);
             // 
             // buttonXoa
             // 
@@ -85,16 +73,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = true;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
-            // 
-            // buttonIn
-            // 
-            this.buttonIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIn.Location = new System.Drawing.Point(111, 35);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(89, 31);
-            this.buttonIn.TabIndex = 76;
-            this.buttonIn.Text = "In";
-            this.buttonIn.UseVisualStyleBackColor = true;
             // 
             // buttonThem
             // 
@@ -155,14 +133,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dataGridViewHopDong.Size = new System.Drawing.Size(927, 233);
             this.dataGridViewHopDong.TabIndex = 58;
             this.dataGridViewHopDong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHopDong_CellClick);
-            // 
-            // textBoxLoaiHopDong
-            // 
-            this.textBoxLoaiHopDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLoaiHopDong.Location = new System.Drawing.Point(709, 348);
-            this.textBoxLoaiHopDong.Name = "textBoxLoaiHopDong";
-            this.textBoxLoaiHopDong.Size = new System.Drawing.Size(240, 22);
-            this.textBoxLoaiHopDong.TabIndex = 80;
             // 
             // textBoxDonGiaNgayCong
             // 
@@ -235,23 +205,44 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
+            this.buttonQuayLai.TabIndex = 88;
+            this.buttonQuayLai.Text = "Trờ về";
+            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxLoaiHopDong
+            // 
+            this.comboBoxLoaiHopDong.FormattingEnabled = true;
+            this.comboBoxLoaiHopDong.Items.AddRange(new object[] {
+            "Chinh thuc",
+            "Thu viec"});
+            this.comboBoxLoaiHopDong.Location = new System.Drawing.Point(709, 350);
+            this.comboBoxLoaiHopDong.Name = "comboBoxLoaiHopDong";
+            this.comboBoxLoaiHopDong.Size = new System.Drawing.Size(240, 21);
+            this.comboBoxLoaiHopDong.TabIndex = 89;
+            this.comboBoxLoaiHopDong.Text = "Chọn loại hợp đồng";
+            // 
             // DanhSachHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.comboBoxLoaiHopDong);
+            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.dateTimePickerNgayKetThuc);
             this.Controls.Add(this.dateTimePickerNgayBatDau);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonTimKiem);
             this.Controls.Add(this.labelDonGiaNgayCong);
             this.Controls.Add(this.textBoxDonGiaNgayCong);
-            this.Controls.Add(this.textBoxLoaiHopDong);
-            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.labelNgayKetThuc);
             this.Controls.Add(this.labelNgayBatDau);
@@ -270,17 +261,14 @@ namespace BTL_HuongSuKien_v2.Forms
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Label labelNgayKetThuc;
         private System.Windows.Forms.Label labelTenNhanVien;
         private System.Windows.Forms.TextBox textBoxTenNhanVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewHopDong;
-        private System.Windows.Forms.TextBox textBoxLoaiHopDong;
         private System.Windows.Forms.TextBox textBoxDonGiaNgayCong;
         private System.Windows.Forms.Label labelDonGiaNgayCong;
         private System.Windows.Forms.Button buttonTimKiem;
@@ -289,5 +277,7 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayBatDau;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayKetThuc;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button buttonQuayLai;
+        private System.Windows.Forms.ComboBox comboBoxLoaiHopDong;
     }
 }

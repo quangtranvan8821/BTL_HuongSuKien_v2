@@ -30,9 +30,7 @@ namespace BTL_HuongSuKien_v2.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonQuayLai = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonIn = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewLuong = new System.Windows.Forms.DataGridView();
@@ -43,20 +41,10 @@ namespace BTL_HuongSuKien_v2.Forms
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxMaThoiGian = new System.Windows.Forms.TextBox();
+            this.buttonQuayLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonQuayLai
-            // 
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
-            this.buttonQuayLai.TabIndex = 79;
-            this.buttonQuayLai.Text = "<";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
-            this.buttonQuayLai.Click += new System.EventHandler(this.clickQuayLai);
             // 
             // buttonSua
             // 
@@ -68,16 +56,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = true;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
-            // 
-            // buttonIn
-            // 
-            this.buttonIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIn.Location = new System.Drawing.Point(111, 35);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(89, 31);
-            this.buttonIn.TabIndex = 76;
-            this.buttonIn.Text = "In";
-            this.buttonIn.UseVisualStyleBackColor = true;
             // 
             // buttonThem
             // 
@@ -166,21 +144,30 @@ namespace BTL_HuongSuKien_v2.Forms
             this.textBoxMaThoiGian.Size = new System.Drawing.Size(305, 20);
             this.textBoxMaThoiGian.TabIndex = 91;
             // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
+            this.buttonQuayLai.TabIndex = 92;
+            this.buttonQuayLai.Text = "Trờ về";
+            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            // 
             // DanhSachLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.textBoxMaThoiGian);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxSoNgayCong);
             this.Controls.Add(this.textBoxMaHopDong);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewLuong);
@@ -195,10 +182,7 @@ namespace BTL_HuongSuKien_v2.Forms
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewLuong;
@@ -209,5 +193,6 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox textBoxMaThoiGian;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonQuayLai;
     }
 }

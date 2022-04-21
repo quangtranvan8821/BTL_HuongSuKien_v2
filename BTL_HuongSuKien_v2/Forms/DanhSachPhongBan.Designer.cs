@@ -29,26 +29,14 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonQuayLai = new System.Windows.Forms.Button();
             this.buttonXemChiTiet = new System.Windows.Forms.Button();
-            this.buttonIn = new System.Windows.Forms.Button();
             this.comboBoxTenPhongBan = new System.Windows.Forms.ComboBox();
             this.labelTenPhongBan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewPhongBan = new System.Windows.Forms.DataGridView();
+            this.buttonQuayLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhongBan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonQuayLai
-            // 
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
-            this.buttonQuayLai.TabIndex = 79;
-            this.buttonQuayLai.Text = "<";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
-            this.buttonQuayLai.Click += new System.EventHandler(this.clickQuayLai);
             // 
             // buttonXemChiTiet
             // 
@@ -59,16 +47,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonXemChiTiet.TabIndex = 78;
             this.buttonXemChiTiet.Text = "Xem chi tiết";
             this.buttonXemChiTiet.UseVisualStyleBackColor = true;
-            // 
-            // buttonIn
-            // 
-            this.buttonIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIn.Location = new System.Drawing.Point(111, 35);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(89, 31);
-            this.buttonIn.TabIndex = 76;
-            this.buttonIn.Text = "In";
-            this.buttonIn.UseVisualStyleBackColor = true;
             // 
             // comboBoxTenPhongBan
             // 
@@ -108,6 +86,16 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dataGridViewPhongBan.Size = new System.Drawing.Size(927, 369);
             this.dataGridViewPhongBan.TabIndex = 58;
             // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
+            this.buttonQuayLai.TabIndex = 79;
+            this.buttonQuayLai.Text = "Trờ về";
+            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            // 
             // DanhSachPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,7 +104,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonXemChiTiet);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.comboBoxTenPhongBan);
             this.Controls.Add(this.labelTenPhongBan);
             this.Controls.Add(this.label1);
@@ -131,12 +118,11 @@ namespace BTL_HuongSuKien_v2.Forms
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.Button buttonXemChiTiet;
-        private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.ComboBox comboBoxTenPhongBan;
         private System.Windows.Forms.Label labelTenPhongBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewPhongBan;
+        private System.Windows.Forms.Button buttonQuayLai;
     }
 }
