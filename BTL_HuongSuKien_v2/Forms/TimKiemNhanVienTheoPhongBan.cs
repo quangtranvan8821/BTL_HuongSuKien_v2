@@ -69,5 +69,20 @@ namespace BTL_HuongSuKien_v2.Forms
             }
             
         }
+
+        private void TimKiemNhanVienTheoPhongBan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đóng cửa sổ không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

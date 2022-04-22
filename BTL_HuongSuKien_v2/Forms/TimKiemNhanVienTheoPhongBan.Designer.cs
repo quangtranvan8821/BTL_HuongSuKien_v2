@@ -102,6 +102,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 117;
             this.buttonQuayLai.Text = "Trờ về";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // TimKiemNhanVienTheoPhongBan
             // 
@@ -117,6 +118,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dataGridViewNhanVien);
             this.Name = "TimKiemNhanVienTheoPhongBan";
             this.Text = "Tìm kiếm theo phòng ban";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TimKiemNhanVienTheoPhongBan_FormClosing);
             this.Load += new System.EventHandler(this.TimKiemNhanVienTheoPhongBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.ResumeLayout(false);

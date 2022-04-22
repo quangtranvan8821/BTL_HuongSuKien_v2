@@ -24,7 +24,20 @@ namespace BTL_HuongSuKien_v2.Forms
         {
             Close();
         }
-
+        public bool checkThoiGianThuViec(DateTime batdau,DateTime ketthuc)
+        {
+            int st = batdau.Month + batdau.Year * 12;
+            int en = ketthuc.Month + ketthuc.Year * 12;
+            if (en - st > 2 && comboBoxLoaiHopDong.Text=="Thu viec")
+            {
+                MessageBox.Show("Thời gian thử việc phải nhỏ hơn 2 tháng!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void buttonXoa_Click(object sender, EventArgs e)
         {
             try
@@ -40,7 +53,7 @@ namespace BTL_HuongSuKien_v2.Forms
                 cmd.CommandText = @"XoaHopDong";
                 cmd.Parameters.AddWithValue("@id", ma);
                 int i = cmd.ExecuteNonQuery();
-                if (i > 0)
+                if (i > 0&&MessageBox.Show("Ban co muon xoa nhan vien nay khong?", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     load_dataGridViewHopDong();
                     MessageBox.Show("Xóa hợp đồng thành công");
@@ -67,7 +80,7 @@ namespace BTL_HuongSuKien_v2.Forms
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.CommandText = @"SuaHopDong";
                 cmd.Parameters.AddWithValue("@id", ma);
-                cmd.Parameters.AddWithValue("@loai_hop_dong", comboBoxLoaiHopDong.SelectedItem);
+                cmd.Parameters.AddWithValue("@loai_hop_dong", comboBoxLoaiHopDong.Text);
                 cmd.Parameters.AddWithValue("@id_nhan_vien", connectDatabase.ExcuteScalar("select id from nhan_vien where ten_nhan_vien='"+textBoxTenNhanVien.Text+"'"));
                 cmd.Parameters.AddWithValue("@Ngay_bat_dau", dateTimePickerNgayBatDau.Text);
                 cmd.Parameters.AddWithValue("@ngay_ket_thuc",dateTimePickerNgayKetThuc.Text);
@@ -81,7 +94,7 @@ namespace BTL_HuongSuKien_v2.Forms
                     @ngay_ket_thuc date,
                     @don_gia_ngay_cong int*/
                 int i = cmd.ExecuteNonQuery();
-                if (i > 0 && checkNgayBatDauvsNgayKetThuc(Convert.ToDateTime(dateTimePickerNgayBatDau.Text),Convert.ToDateTime(dateTimePickerNgayKetThuc.Text )))
+                if (i > 0 && checkNgayBatDauvsNgayKetThuc(Convert.ToDateTime(dateTimePickerNgayBatDau.Text),Convert.ToDateTime(dateTimePickerNgayKetThuc.Text ))&& checkThoiGianThuViec(Convert.ToDateTime(dateTimePickerNgayBatDau.Text), Convert.ToDateTime(dateTimePickerNgayKetThuc.Text)))
                 {
                     load_dataGridViewHopDong();
                     MessageBox.Show("Sửa hợp đồng thành công");
@@ -102,7 +115,7 @@ namespace BTL_HuongSuKien_v2.Forms
                 check = check | checkTextBoxBlank(textBoxTenNhanVien);
                 /*check = check | checkTextBoxBlank(textBoxLoaiHopDong);*/
                 check = check | checkTextBoxBlank(textBoxDonGiaNgayCong);
-                check = check | !checkNgayBatDauvsNgayKetThuc(Convert.ToDateTime(dateTimePickerNgayBatDau.Text),Convert.ToDateTime(dateTimePickerNgayKetThuc.Text));
+                check = check | !checkNgayBatDauvsNgayKetThuc(Convert.ToDateTime(dateTimePickerNgayBatDau.Text),Convert.ToDateTime(dateTimePickerNgayKetThuc.Text))| !checkThoiGianThuViec(Convert.ToDateTime(dateTimePickerNgayBatDau.Text), Convert.ToDateTime(dateTimePickerNgayKetThuc.Text));
 
                 ConnectDatabase.ConnectDatabase connectDatabase = new ConnectDatabase.ConnectDatabase();
                 if (check == false)
@@ -116,7 +129,7 @@ namespace BTL_HuongSuKien_v2.Forms
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.CommandText = @"ThemHopDong";
 
-                    cmd.Parameters.AddWithValue("@loai_hop_dong", comboBoxLoaiHopDong.SelectedItem);
+                    cmd.Parameters.AddWithValue("@loai_hop_dong", comboBoxLoaiHopDong.Text);
                     cmd.Parameters.AddWithValue("@id_nhan_vien", connectDatabase.ExcuteScalar("select id from nhan_vien where ten_nhan_vien='"+textBoxTenNhanVien.Text+"'"));
                     cmd.Parameters.AddWithValue("@ngay_bat_dau", dateTimePickerNgayBatDau.Text);
                     cmd.Parameters.AddWithValue("@ngay_ket_thuc", dateTimePickerNgayKetThuc.Text);
@@ -193,6 +206,21 @@ namespace BTL_HuongSuKien_v2.Forms
             dateTimePickerNgayBatDau.Text = dataGridViewHopDong.CurrentRow.Cells["Ngày bắt đầu"].Value.ToString();
             dateTimePickerNgayKetThuc.Text = dataGridViewHopDong.CurrentRow.Cells["Ngày kết thúc"].Value.ToString();
 
+        }
+
+        private void DanhSachHopDong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đóng cửa sổ không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

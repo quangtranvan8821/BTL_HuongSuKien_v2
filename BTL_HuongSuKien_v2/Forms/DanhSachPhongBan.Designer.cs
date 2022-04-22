@@ -95,6 +95,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 79;
             this.buttonQuayLai.Text = "Trờ về";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // DanhSachPhongBan
             // 
@@ -110,6 +111,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dataGridViewPhongBan);
             this.Name = "DanhSachPhongBan";
             this.Text = "Phòng ban";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachPhongBan_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachPhongBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhongBan)).EndInit();
             this.ResumeLayout(false);
