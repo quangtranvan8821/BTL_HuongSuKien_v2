@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_HuongSuKien_v2.Reports;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,7 +67,7 @@ namespace BTL_HuongSuKien_v2.Forms
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void nhânViênTheoTênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,12 +86,41 @@ namespace BTL_HuongSuKien_v2.Forms
 
         private void nhânViênTheoChứcVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            TimKiemNhanVienTheoChucVu danhSachPhongBan = new TimKiemNhanVienTheoChucVu();
+            danhSachPhongBan.MdiParent = this;
+            danhSachPhongBan.Show();
         }
 
         private void nhânViênTheoPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            BaoCaoNhanVienTheoPhongBan danhSachPhongBan = new BaoCaoNhanVienTheoPhongBan();
+            danhSachPhongBan.MdiParent = this;
+            danhSachPhongBan.Show();
+        }
 
+        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đóng cửa sổ không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void nhânViênHếtHạnHợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoNhanVienHetHopDong danhSachPhongBan = new BaoCaoNhanVienHetHopDong();
+            danhSachPhongBan.MdiParent = this;
+            danhSachPhongBan.Show();
+        }
+
+        private void lươngTheoThờiGianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            BaoCaoLuongTheoThoiGian danhSachPhongBan = new BaoCaoLuongTheoThoiGian();
+            danhSachPhongBan.MdiParent = this;
+            danhSachPhongBan.Show();
         }
     }
 }

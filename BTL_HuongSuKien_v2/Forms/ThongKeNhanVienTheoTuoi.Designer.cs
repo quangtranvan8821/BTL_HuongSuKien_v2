@@ -29,26 +29,30 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonThongKe = new System.Windows.Forms.Button();
             this.labelTenPhongBan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
+            this.dataGridViewNhanVienTheoTuoi = new System.Windows.Forms.DataGridView();
             this.textBoxTu = new System.Windows.Forms.TextBox();
             this.textBoxDen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonQuayLai = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVienTheoTuoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonThongKe
             // 
             this.buttonThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThongKe.Location = new System.Drawing.Point(867, 42);
+            this.buttonThongKe.Location = new System.Drawing.Point(406, 477);
             this.buttonThongKe.Name = "buttonThongKe";
             this.buttonThongKe.Size = new System.Drawing.Size(89, 31);
             this.buttonThongKe.TabIndex = 87;
             this.buttonThongKe.Text = "Thống kê";
             this.buttonThongKe.UseVisualStyleBackColor = true;
+            this.buttonThongKe.Click += new System.EventHandler(this.buttonThongKe_Click);
             // 
             // labelTenPhongBan
             // 
@@ -70,15 +74,15 @@ namespace BTL_HuongSuKien_v2.Forms
             this.label1.TabIndex = 81;
             this.label1.Text = "Thống kê nhân viên theo tuổi";
             // 
-            // dataGridViewNhanVien
+            // dataGridViewNhanVienTheoTuoi
             // 
-            this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNhanVien.Location = new System.Drawing.Point(29, 82);
-            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
-            this.dataGridViewNhanVien.Size = new System.Drawing.Size(927, 369);
-            this.dataGridViewNhanVien.TabIndex = 80;
+            this.dataGridViewNhanVienTheoTuoi.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewNhanVienTheoTuoi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewNhanVienTheoTuoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNhanVienTheoTuoi.Location = new System.Drawing.Point(29, 82);
+            this.dataGridViewNhanVienTheoTuoi.Name = "dataGridViewNhanVienTheoTuoi";
+            this.dataGridViewNhanVienTheoTuoi.Size = new System.Drawing.Size(927, 369);
+            this.dataGridViewNhanVienTheoTuoi.TabIndex = 80;
             // 
             // textBoxTu
             // 
@@ -113,6 +117,11 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 92;
             this.buttonQuayLai.Text = "Trờ về";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ThongKeNhanVienTheoTuoi
             // 
@@ -127,10 +136,12 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.buttonThongKe);
             this.Controls.Add(this.labelTenPhongBan);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridViewNhanVien);
+            this.Controls.Add(this.dataGridViewNhanVienTheoTuoi);
             this.Name = "ThongKeNhanVienTheoTuoi";
             this.Text = "Thống kê nhân viên theo tuổi";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ThongKeNhanVienTheoTuoi_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVienTheoTuoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,10 +151,11 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Button buttonThongKe;
         private System.Windows.Forms.Label labelTenPhongBan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
+        private System.Windows.Forms.DataGridView dataGridViewNhanVienTheoTuoi;
         private System.Windows.Forms.TextBox textBoxTu;
         private System.Windows.Forms.TextBox textBoxDen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonQuayLai;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

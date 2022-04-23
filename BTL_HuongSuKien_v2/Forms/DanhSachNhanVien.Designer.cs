@@ -306,6 +306,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dataGridViewNhanVien);
             this.Name = "DanhSachNhanVien";
             this.Text = "Nhân viên";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachNhanVien_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);

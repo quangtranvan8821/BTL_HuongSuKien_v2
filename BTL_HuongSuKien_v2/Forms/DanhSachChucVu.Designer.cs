@@ -132,6 +132,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 83;
             this.buttonQuayLai.Text = "Trờ về";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // DanhSachChucVu
             // 
@@ -150,6 +151,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dataGridViewChucVu);
             this.Name = "DanhSachChucVu";
             this.Text = "Chức vụ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachChucVu_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChucVu)).EndInit();
             this.ResumeLayout(false);

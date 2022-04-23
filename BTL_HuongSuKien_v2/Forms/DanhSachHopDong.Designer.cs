@@ -214,6 +214,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.TabIndex = 88;
             this.buttonQuayLai.Text = "Trờ về";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // comboBoxLoaiHopDong
             // 
@@ -252,6 +253,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dataGridViewHopDong);
             this.Name = "DanhSachHopDong";
             this.Text = "Danh sách hợp đồng";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachHopDong_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachHopDong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHopDong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

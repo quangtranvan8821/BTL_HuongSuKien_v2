@@ -45,6 +45,8 @@ namespace BTL_HuongSuKien_v2.Forms
             this.nhânViênTheoChứcVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênTheoPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhânViênHếtHạnHợpĐồngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lươngTheoThờiGianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,7 +160,9 @@ namespace BTL_HuongSuKien_v2.Forms
             // báoCáoToolStripMenuItem
             // 
             this.báoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nhânViênTheoPhòngToolStripMenuItem});
+            this.nhânViênTheoPhòngToolStripMenuItem,
+            this.nhânViênHếtHạnHợpĐồngToolStripMenuItem,
+            this.lươngTheoThờiGianToolStripMenuItem});
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
             this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
@@ -166,9 +170,23 @@ namespace BTL_HuongSuKien_v2.Forms
             // nhânViênTheoPhòngToolStripMenuItem
             // 
             this.nhânViênTheoPhòngToolStripMenuItem.Name = "nhânViênTheoPhòngToolStripMenuItem";
-            this.nhânViênTheoPhòngToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.nhânViênTheoPhòngToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.nhânViênTheoPhòngToolStripMenuItem.Text = "Nhân viên theo phòng";
             this.nhânViênTheoPhòngToolStripMenuItem.Click += new System.EventHandler(this.nhânViênTheoPhòngToolStripMenuItem_Click);
+            // 
+            // nhânViênHếtHạnHợpĐồngToolStripMenuItem
+            // 
+            this.nhânViênHếtHạnHợpĐồngToolStripMenuItem.Name = "nhânViênHếtHạnHợpĐồngToolStripMenuItem";
+            this.nhânViênHếtHạnHợpĐồngToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.nhânViênHếtHạnHợpĐồngToolStripMenuItem.Text = "Nhân viên hết hạn hợp đồng";
+            this.nhânViênHếtHạnHợpĐồngToolStripMenuItem.Click += new System.EventHandler(this.nhânViênHếtHạnHợpĐồngToolStripMenuItem_Click);
+            // 
+            // lươngTheoThờiGianToolStripMenuItem
+            // 
+            this.lươngTheoThờiGianToolStripMenuItem.Name = "lươngTheoThờiGianToolStripMenuItem";
+            this.lươngTheoThờiGianToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.lươngTheoThờiGianToolStripMenuItem.Text = "Lương theo thời gian";
+            this.lươngTheoThờiGianToolStripMenuItem.Click += new System.EventHandler(this.lươngTheoThờiGianToolStripMenuItem_Click);
             // 
             // TrangChu
             // 
@@ -183,6 +201,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TrangChu";
             this.Text = "Trang chủ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrangChu_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -207,5 +226,7 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.ToolStripMenuItem nhânViênTheoChứcVụToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênTheoPhòngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhânViênHếtHạnHợpĐồngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lươngTheoThờiGianToolStripMenuItem;
     }
 }

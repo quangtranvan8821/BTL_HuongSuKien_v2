@@ -79,5 +79,20 @@ namespace BTL_HuongSuKien_v2.Forms
             comboBoxTenChucVu.Text = dataGridViewChucVu.CurrentRow.Cells["Tên chức vụ"].Value.ToString();
             textBoxTienPhuCap.Text = dataGridViewChucVu.CurrentRow.Cells["Phụ cấp"].Value.ToString();
         }
+
+        private void DanhSachChucVu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đóng cửa sổ không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

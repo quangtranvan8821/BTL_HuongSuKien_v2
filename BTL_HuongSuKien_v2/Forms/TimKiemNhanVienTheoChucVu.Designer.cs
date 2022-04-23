@@ -1,7 +1,7 @@
 ﻿
 namespace BTL_HuongSuKien_v2.Forms
 {
-    partial class TimKiemNhanVienTheoPhongBan
+    partial class TimKiemNhanVienTheoChucVu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,16 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
-            this.comboBoxTenPhongBan = new System.Windows.Forms.ComboBox();
-            this.labelTenPhongBan = new System.Windows.Forms.Label();
+            this.dataGridViewNhanVienTheoChucVu = new System.Windows.Forms.DataGridView();
+            this.comboBoxTenChucVu = new System.Windows.Forms.ComboBox();
+            this.labelTenChucVu = new System.Windows.Forms.Label();
             this.buttonQuayLai = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVienTheoChucVu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonTimKiem
@@ -53,45 +56,45 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(353, 36);
+            this.label1.Location = new System.Drawing.Point(314, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 31);
+            this.label1.Size = new System.Drawing.Size(291, 31);
             this.label1.TabIndex = 108;
-            this.label1.Text = "Tìm kiếm theo phòng ban";
+            this.label1.Text = "Tìm kiếm theo chức vụ ";
             // 
-            // dataGridViewNhanVien
+            // dataGridViewNhanVienTheoChucVu
             // 
-            this.dataGridViewNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNhanVien.Location = new System.Drawing.Point(29, 95);
-            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
-            this.dataGridViewNhanVien.Size = new System.Drawing.Size(927, 276);
-            this.dataGridViewNhanVien.TabIndex = 107;
+            this.dataGridViewNhanVienTheoChucVu.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewNhanVienTheoChucVu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewNhanVienTheoChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNhanVienTheoChucVu.Location = new System.Drawing.Point(29, 95);
+            this.dataGridViewNhanVienTheoChucVu.Name = "dataGridViewNhanVienTheoChucVu";
+            this.dataGridViewNhanVienTheoChucVu.Size = new System.Drawing.Size(927, 276);
+            this.dataGridViewNhanVienTheoChucVu.TabIndex = 107;
             // 
-            // comboBoxTenPhongBan
+            // comboBoxTenChucVu
             // 
-            this.comboBoxTenPhongBan.FormattingEnabled = true;
-            this.comboBoxTenPhongBan.Items.AddRange(new object[] {
+            this.comboBoxTenChucVu.FormattingEnabled = true;
+            this.comboBoxTenChucVu.Items.AddRange(new object[] {
             "Phòng kinh doanh",
             "Phòng nhân sự",
             "Phòng kế toán",
             "Phòng marketing",
             "Phòng kỹ thuật"});
-            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(157, 389);
-            this.comboBoxTenPhongBan.Name = "comboBoxTenPhongBan";
-            this.comboBoxTenPhongBan.Size = new System.Drawing.Size(303, 21);
-            this.comboBoxTenPhongBan.TabIndex = 116;
+            this.comboBoxTenChucVu.Location = new System.Drawing.Point(157, 389);
+            this.comboBoxTenChucVu.Name = "comboBoxTenChucVu";
+            this.comboBoxTenChucVu.Size = new System.Drawing.Size(303, 21);
+            this.comboBoxTenChucVu.TabIndex = 116;
             // 
-            // labelTenPhongBan
+            // labelTenChucVu
             // 
-            this.labelTenPhongBan.AutoSize = true;
-            this.labelTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenPhongBan.Location = new System.Drawing.Point(25, 390);
-            this.labelTenPhongBan.Name = "labelTenPhongBan";
-            this.labelTenPhongBan.Size = new System.Drawing.Size(120, 20);
-            this.labelTenPhongBan.TabIndex = 113;
-            this.labelTenPhongBan.Text = "Tên phòng ban:";
+            this.labelTenChucVu.AutoSize = true;
+            this.labelTenChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenChucVu.Location = new System.Drawing.Point(25, 390);
+            this.labelTenChucVu.Name = "labelTenChucVu";
+            this.labelTenChucVu.Size = new System.Drawing.Size(102, 20);
+            this.labelTenChucVu.TabIndex = 113;
+            this.labelTenChucVu.Text = "Tên chức vụ :";
             // 
             // buttonQuayLai
             // 
@@ -104,23 +107,28 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.UseVisualStyleBackColor = true;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
-            // TimKiemNhanVienTheoPhongBan
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // TimKiemNhanVienTheoChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.comboBoxTenPhongBan);
-            this.Controls.Add(this.labelTenPhongBan);
+            this.Controls.Add(this.comboBoxTenChucVu);
+            this.Controls.Add(this.labelTenChucVu);
             this.Controls.Add(this.buttonTimKiem);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridViewNhanVien);
-            this.Name = "TimKiemNhanVienTheoPhongBan";
+            this.Controls.Add(this.dataGridViewNhanVienTheoChucVu);
+            this.Name = "TimKiemNhanVienTheoChucVu";
             this.Text = "Tìm kiếm theo phòng ban";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TimKiemNhanVienTheoPhongBan_FormClosing);
-            this.Load += new System.EventHandler(this.TimKiemNhanVienTheoPhongBan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TimKiemNhanVienTheoChucVu_FormClosing);
+            this.Load += new System.EventHandler(this.TimKiemNhanVienTheoChucVu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVienTheoChucVu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,9 +137,10 @@ namespace BTL_HuongSuKien_v2.Forms
         #endregion
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
-        private System.Windows.Forms.ComboBox comboBoxTenPhongBan;
-        private System.Windows.Forms.Label labelTenPhongBan;
+        private System.Windows.Forms.DataGridView dataGridViewNhanVienTheoChucVu;
+        private System.Windows.Forms.ComboBox comboBoxTenChucVu;
+        private System.Windows.Forms.Label labelTenChucVu;
         private System.Windows.Forms.Button buttonQuayLai;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

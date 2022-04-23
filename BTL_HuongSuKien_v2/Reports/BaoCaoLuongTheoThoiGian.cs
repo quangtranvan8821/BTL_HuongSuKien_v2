@@ -10,30 +10,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_HuongSuKien_v2.Forms
+namespace BTL_HuongSuKien_v2.Reports
 {
-    public partial class TimKiemNhanVienTheoTen : Form
+    public partial class BaoCaoLuongTheoThoiGian : Form
     {
-        public TimKiemNhanVienTheoTen()
+        public BaoCaoLuongTheoThoiGian()
         {
             InitializeComponent();
         }
 
-        //close form
-        private void clickQuayLai(object sender, EventArgs e)
+        private void labelTenPhongBan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonQuayLai_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonTimKiem_Click(object sender, EventArgs e)
+        private void buttonThongKe_Click(object sender, EventArgs e)
         {
             try
             {
+
                 ConnectDatabase.ConnectDatabase connectDatabase = new ConnectDatabase.ConnectDatabase();
                 string cont = ConfigurationManager.ConnectionStrings["connectAll"].ConnectionString;
                 SqlConnection cnt = new SqlConnection(cont);
@@ -41,12 +41,17 @@ namespace BTL_HuongSuKien_v2.Forms
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cnt;
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.CommandText = @"TimKiemNhanVien_tenNV";
-                cmd.Parameters.AddWithValue("@hoten", textBoxNhapTen.Text);
+                cmd.CommandText = @"ThongKeLuong_ThoiGian";
+                cmd.Parameters.AddWithValue("@thang", comboBoxThang.Text);
+                cmd.Parameters.AddWithValue("@nam", textBoxNam.Text);
                 DataTable table = new DataTable();
                 SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
                 sqlData.Fill(table);
-                dataGridViewNhanVien.DataSource = table;
+                ThongKeLuongTheoThoiGian cry = new ThongKeLuongTheoThoiGian();
+                cry.SetDataSource(table);
+                FormLoadReport form = new FormLoadReport();
+                form.crystalReportViewer1.ReportSource = cry;
+                form.ShowDialog();
             }
             catch (SqlException i)
             {
@@ -54,7 +59,7 @@ namespace BTL_HuongSuKien_v2.Forms
             }
         }
 
-        private void TimKiemNhanVienTheoTen_FormClosing(object sender, FormClosingEventArgs e)
+        private void BaoCaoLuongTheoThoiGian_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đóng cửa sổ không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 e.Cancel = false;
@@ -62,11 +67,6 @@ namespace BTL_HuongSuKien_v2.Forms
             {
                 e.Cancel = true;
             }
-        }
-
-        private void buttonQuayLai_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
