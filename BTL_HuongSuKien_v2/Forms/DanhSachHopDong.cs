@@ -26,9 +26,9 @@ namespace BTL_HuongSuKien_v2.Forms
         }
         public bool checkThoiGianThuViec(DateTime batdau,DateTime ketthuc)
         {
-            int st = batdau.Month + batdau.Year * 12;
-            int en = ketthuc.Month + ketthuc.Year * 12;
-            if (en - st > 2 && comboBoxLoaiHopDong.Text=="Thu viec")
+            int st = batdau.Month * 30 + batdau.Year * 12 * 30 + batdau.Day ;
+            int en = ketthuc.Month*30 + ketthuc.Year * 12*30+ketthuc.Day;
+            if (en - st > 2*30 && comboBoxLoaiHopDong.Text=="Thu viec")
             {
                 MessageBox.Show("Thời gian thử việc phải nhỏ hơn 2 tháng!");
                 return false;

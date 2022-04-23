@@ -85,7 +85,9 @@ namespace BTL_HuongSuKien_v2.Forms
 
         private void nhânViênTheoChứcVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            TimKiemNhanVienTheoChucVu danhSachPhongBan = new TimKiemNhanVienTheoChucVu();
+            danhSachPhongBan.MdiParent = this;
+            danhSachPhongBan.Show();
         }
 
         private void nhânViênTheoPhòngToolStripMenuItem_Click(object sender, EventArgs e)
