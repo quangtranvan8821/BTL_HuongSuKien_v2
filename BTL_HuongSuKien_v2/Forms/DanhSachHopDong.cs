@@ -67,7 +67,7 @@ namespace BTL_HuongSuKien_v2.Forms
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.CommandText = @"SuaHopDong";
                 cmd.Parameters.AddWithValue("@id", ma);
-                cmd.Parameters.AddWithValue("@loai_hop_dong", textBoxLoaiHopDong.Text);
+                cmd.Parameters.AddWithValue("@loai_hop_dong", comboBoxLoaiHopDong.SelectedItem);
                 cmd.Parameters.AddWithValue("@id_nhan_vien", connectDatabase.ExcuteScalar("select id from nhan_vien where ten_nhan_vien='"+textBoxTenNhanVien.Text+"'"));
                 cmd.Parameters.AddWithValue("@Ngay_bat_dau", dateTimePickerNgayBatDau.Text);
                 cmd.Parameters.AddWithValue("@ngay_ket_thuc",dateTimePickerNgayKetThuc.Text);
@@ -100,7 +100,7 @@ namespace BTL_HuongSuKien_v2.Forms
             try
             {
                 check = check | checkTextBoxBlank(textBoxTenNhanVien);
-                check = check | checkTextBoxBlank(textBoxLoaiHopDong);
+                /*check = check | checkTextBoxBlank(textBoxLoaiHopDong);*/
                 check = check | checkTextBoxBlank(textBoxDonGiaNgayCong);
                 check = check | !checkNgayBatDauvsNgayKetThuc(Convert.ToDateTime(dateTimePickerNgayBatDau.Text),Convert.ToDateTime(dateTimePickerNgayKetThuc.Text));
 
@@ -116,7 +116,7 @@ namespace BTL_HuongSuKien_v2.Forms
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.CommandText = @"ThemHopDong";
 
-                    cmd.Parameters.AddWithValue("@loai_hop_dong", textBoxLoaiHopDong.Text);
+                    cmd.Parameters.AddWithValue("@loai_hop_dong", comboBoxLoaiHopDong.SelectedItem);
                     cmd.Parameters.AddWithValue("@id_nhan_vien", connectDatabase.ExcuteScalar("select id from nhan_vien where ten_nhan_vien='"+textBoxTenNhanVien.Text+"'"));
                     cmd.Parameters.AddWithValue("@ngay_bat_dau", dateTimePickerNgayBatDau.Text);
                     cmd.Parameters.AddWithValue("@ngay_ket_thuc", dateTimePickerNgayKetThuc.Text);
@@ -188,7 +188,7 @@ namespace BTL_HuongSuKien_v2.Forms
         private void dataGridViewHopDong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxTenNhanVien.Text = dataGridViewHopDong.CurrentRow.Cells["Họ tên"].Value.ToString();
-            textBoxLoaiHopDong.Text = dataGridViewHopDong.CurrentRow.Cells["Loại hợp đồng"].Value.ToString();
+            comboBoxLoaiHopDong.SelectedItem = dataGridViewHopDong.CurrentRow.Cells["Loại hợp đồng"].Value.ToString();
             textBoxDonGiaNgayCong.Text = dataGridViewHopDong.CurrentRow.Cells["Lương ngày"].Value.ToString();
             dateTimePickerNgayBatDau.Text = dataGridViewHopDong.CurrentRow.Cells["Ngày bắt đầu"].Value.ToString();
             dateTimePickerNgayKetThuc.Text = dataGridViewHopDong.CurrentRow.Cells["Ngày kết thúc"].Value.ToString();

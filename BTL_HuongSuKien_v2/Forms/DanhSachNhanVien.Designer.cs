@@ -48,7 +48,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.labelTenNhanVien = new System.Windows.Forms.Label();
             this.textBoxTenNhanVien = new System.Windows.Forms.TextBox();
             this.buttonThem = new System.Windows.Forms.Button();
-            this.buttonIn = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonQuayLai = new System.Windows.Forms.Button();
             this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -234,16 +233,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
-            // buttonIn
-            // 
-            this.buttonIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIn.Location = new System.Drawing.Point(110, 33);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(89, 31);
-            this.buttonIn.TabIndex = 53;
-            this.buttonIn.Text = "In";
-            this.buttonIn.UseVisualStyleBackColor = true;
-            // 
             // buttonSua
             // 
             this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,7 +251,7 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
             this.buttonQuayLai.TabIndex = 56;
-            this.buttonQuayLai.Text = "<";
+            this.buttonQuayLai.Text = "Trờ về";
             this.buttonQuayLai.UseVisualStyleBackColor = true;
             this.buttonQuayLai.Click += new System.EventHandler(this.clickQuayLai);
             // 
@@ -299,7 +288,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dateTimePickerNgaySinh);
             this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.textBoxSDT);
             this.Controls.Add(this.labelSoDienThoai);
@@ -348,7 +336,6 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Label labelTenNhanVien;
         private System.Windows.Forms.TextBox textBoxTenNhanVien;
         private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonQuayLai;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;

@@ -30,12 +30,11 @@ namespace BTL_HuongSuKien_v2.Forms
         private void InitializeComponent()
         {
             this.buttonTimKiem = new System.Windows.Forms.Button();
-            this.buttonQuayLai = new System.Windows.Forms.Button();
-            this.buttonIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.textBoxNhapTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonQuayLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,27 +48,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonTimKiem.Text = "Tìm kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = true;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
-            // 
-            // buttonQuayLai
-            // 
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
-            this.buttonQuayLai.TabIndex = 101;
-            this.buttonQuayLai.Text = "<";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
-            this.buttonQuayLai.Click += new System.EventHandler(this.clickQuayLai);
-            // 
-            // buttonIn
-            // 
-            this.buttonIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIn.Location = new System.Drawing.Point(111, 35);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(89, 31);
-            this.buttonIn.TabIndex = 98;
-            this.buttonIn.Text = "In";
-            this.buttonIn.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -109,17 +87,26 @@ namespace BTL_HuongSuKien_v2.Forms
             this.label2.Text = "Họ và tên: ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
+            this.buttonQuayLai.TabIndex = 108;
+            this.buttonQuayLai.Text = "Trờ về";
+            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            // 
             // TimKiemNhanVienTheoTen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNhapTen);
             this.Controls.Add(this.buttonTimKiem);
-            this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewNhanVien);
             this.Name = "TimKiemNhanVienTheoTen";
@@ -133,11 +120,10 @@ namespace BTL_HuongSuKien_v2.Forms
         #endregion
 
         private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.Button buttonQuayLai;
-        private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.TextBox textBoxNhapTen;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonQuayLai;
     }
 }

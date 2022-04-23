@@ -30,8 +30,6 @@ namespace BTL_HuongSuKien_v2.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonQuayLai = new System.Windows.Forms.Button();
-            this.buttonIn = new System.Windows.Forms.Button();
             this.labelTenPhongBan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewThoiGian = new System.Windows.Forms.DataGridView();
@@ -40,29 +38,10 @@ namespace BTL_HuongSuKien_v2.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.buttonThem = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonQuayLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThoiGian)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonQuayLai
-            // 
-            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
-            this.buttonQuayLai.TabIndex = 79;
-            this.buttonQuayLai.Text = "<";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
-            // 
-            // buttonIn
-            // 
-            this.buttonIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIn.Location = new System.Drawing.Point(111, 35);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(89, 31);
-            this.buttonIn.TabIndex = 76;
-            this.buttonIn.Text = "In";
-            this.buttonIn.UseVisualStyleBackColor = true;
             // 
             // labelTenPhongBan
             // 
@@ -133,18 +112,27 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // buttonQuayLai
+            // 
+            this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuayLai.Location = new System.Drawing.Point(29, 35);
+            this.buttonQuayLai.Name = "buttonQuayLai";
+            this.buttonQuayLai.Size = new System.Drawing.Size(58, 31);
+            this.buttonQuayLai.TabIndex = 84;
+            this.buttonQuayLai.Text = "Trờ về";
+            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            // 
             // DanhSachThoiGian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNam);
             this.Controls.Add(this.textBoxThang);
-            this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.labelTenPhongBan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewThoiGian);
@@ -159,8 +147,6 @@ namespace BTL_HuongSuKien_v2.Forms
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonQuayLai;
-        private System.Windows.Forms.Button buttonIn;
         private System.Windows.Forms.Label labelTenPhongBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewThoiGian;
@@ -169,5 +155,6 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button buttonQuayLai;
     }
 }
