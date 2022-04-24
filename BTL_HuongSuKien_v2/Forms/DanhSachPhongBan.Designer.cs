@@ -29,42 +29,13 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonXemChiTiet = new System.Windows.Forms.Button();
-            this.comboBoxTenPhongBan = new System.Windows.Forms.ComboBox();
-            this.labelTenPhongBan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewPhongBan = new System.Windows.Forms.DataGridView();
             this.buttonQuayLai = new System.Windows.Forms.Button();
+            this.labelTenPhongBan = new System.Windows.Forms.Label();
+            this.comboBoxTenPhongBan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhongBan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonXemChiTiet
-            // 
-            this.buttonXemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXemChiTiet.Location = new System.Drawing.Point(829, 490);
-            this.buttonXemChiTiet.Name = "buttonXemChiTiet";
-            this.buttonXemChiTiet.Size = new System.Drawing.Size(127, 31);
-            this.buttonXemChiTiet.TabIndex = 78;
-            this.buttonXemChiTiet.Text = "Xem chi tiết";
-            this.buttonXemChiTiet.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxTenPhongBan
-            // 
-            this.comboBoxTenPhongBan.FormattingEnabled = true;
-            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(166, 499);
-            this.comboBoxTenPhongBan.Name = "comboBoxTenPhongBan";
-            this.comboBoxTenPhongBan.Size = new System.Drawing.Size(303, 21);
-            this.comboBoxTenPhongBan.TabIndex = 71;
-            // 
-            // labelTenPhongBan
-            // 
-            this.labelTenPhongBan.AutoSize = true;
-            this.labelTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenPhongBan.Location = new System.Drawing.Point(36, 501);
-            this.labelTenPhongBan.Name = "labelTenPhongBan";
-            this.labelTenPhongBan.Size = new System.Drawing.Size(120, 20);
-            this.labelTenPhongBan.TabIndex = 68;
-            this.labelTenPhongBan.Text = "Tên phòng ban:";
             // 
             // label1
             // 
@@ -97,6 +68,24 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.UseVisualStyleBackColor = true;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
+            // labelTenPhongBan
+            // 
+            this.labelTenPhongBan.AutoSize = true;
+            this.labelTenPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenPhongBan.Location = new System.Drawing.Point(36, 501);
+            this.labelTenPhongBan.Name = "labelTenPhongBan";
+            this.labelTenPhongBan.Size = new System.Drawing.Size(120, 20);
+            this.labelTenPhongBan.TabIndex = 68;
+            this.labelTenPhongBan.Text = "Tên phòng ban:";
+            // 
+            // comboBoxTenPhongBan
+            // 
+            this.comboBoxTenPhongBan.FormattingEnabled = true;
+            this.comboBoxTenPhongBan.Location = new System.Drawing.Point(166, 499);
+            this.comboBoxTenPhongBan.Name = "comboBoxTenPhongBan";
+            this.comboBoxTenPhongBan.Size = new System.Drawing.Size(303, 21);
+            this.comboBoxTenPhongBan.TabIndex = 71;
+            // 
             // DanhSachPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,7 +93,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.buttonXemChiTiet);
             this.Controls.Add(this.comboBoxTenPhongBan);
             this.Controls.Add(this.labelTenPhongBan);
             this.Controls.Add(this.label1);
@@ -120,11 +108,10 @@ namespace BTL_HuongSuKien_v2.Forms
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonXemChiTiet;
-        private System.Windows.Forms.ComboBox comboBoxTenPhongBan;
-        private System.Windows.Forms.Label labelTenPhongBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewPhongBan;
         private System.Windows.Forms.Button buttonQuayLai;
+        private System.Windows.Forms.Label labelTenPhongBan;
+        private System.Windows.Forms.ComboBox comboBoxTenPhongBan;
     }
 }

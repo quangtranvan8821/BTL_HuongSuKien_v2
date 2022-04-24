@@ -40,7 +40,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.dataGridViewHopDong = new System.Windows.Forms.DataGridView();
             this.textBoxDonGiaNgayCong = new System.Windows.Forms.TextBox();
             this.labelDonGiaNgayCong = new System.Windows.Forms.Label();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.labelNgayBatDau = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerNgayBatDau = new System.Windows.Forms.DateTimePicker();
@@ -151,16 +150,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.labelDonGiaNgayCong.TabIndex = 82;
             this.labelDonGiaNgayCong.Text = "Đơn giá ngày công:";
             // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTimKiem.Location = new System.Drawing.Point(841, 35);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(114, 30);
-            this.buttonTimKiem.TabIndex = 83;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.UseVisualStyleBackColor = true;
-            // 
             // labelNgayBatDau
             // 
             this.labelNgayBatDau.AutoSize = true;
@@ -239,7 +228,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.dateTimePickerNgayKetThuc);
             this.Controls.Add(this.dateTimePickerNgayBatDau);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonTimKiem);
             this.Controls.Add(this.labelDonGiaNgayCong);
             this.Controls.Add(this.textBoxDonGiaNgayCong);
             this.Controls.Add(this.buttonXoa);
@@ -273,7 +261,6 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.DataGridView dataGridViewHopDong;
         private System.Windows.Forms.TextBox textBoxDonGiaNgayCong;
         private System.Windows.Forms.Label labelDonGiaNgayCong;
-        private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.Label labelNgayBatDau;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayBatDau;

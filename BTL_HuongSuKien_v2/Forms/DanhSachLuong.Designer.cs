@@ -33,17 +33,21 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewLuong = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxMaHopDong = new System.Windows.Forms.TextBox();
             this.textBoxSoNgayCong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxMaThoiGian = new System.Windows.Forms.TextBox();
             this.buttonQuayLai = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).BeginInit();
+            this.textBoxNam = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxThang = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridViewLuong = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxLuong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSua
@@ -77,17 +81,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.label1.Size = new System.Drawing.Size(217, 31);
             this.label1.TabIndex = 59;
             this.label1.Text = "Danh sách lương";
-            // 
-            // dataGridViewLuong
-            // 
-            this.dataGridViewLuong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewLuong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLuong.Location = new System.Drawing.Point(29, 81);
-            this.dataGridViewLuong.Name = "dataGridViewLuong";
-            this.dataGridViewLuong.Size = new System.Drawing.Size(927, 233);
-            this.dataGridViewLuong.TabIndex = 58;
-            this.dataGridViewLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLuong_CellClick);
             // 
             // label2
             // 
@@ -127,23 +120,6 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 406);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 20);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "Mã Thời Gian :";
-            // 
-            // textBoxMaThoiGian
-            // 
-            this.textBoxMaThoiGian.Location = new System.Drawing.Point(151, 406);
-            this.textBoxMaThoiGian.Name = "textBoxMaThoiGian";
-            this.textBoxMaThoiGian.Size = new System.Drawing.Size(305, 20);
-            this.textBoxMaThoiGian.TabIndex = 91;
-            // 
             // buttonQuayLai
             // 
             this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,15 +131,82 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai.UseVisualStyleBackColor = true;
             this.buttonQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
+            // textBoxNam
+            // 
+            this.textBoxNam.Location = new System.Drawing.Point(368, 391);
+            this.textBoxNam.Name = "textBoxNam";
+            this.textBoxNam.Size = new System.Drawing.Size(88, 20);
+            this.textBoxNam.TabIndex = 94;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(246, 391);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 20);
+            this.label5.TabIndex = 93;
+            this.label5.Text = "Năm:";
+            // 
+            // textBoxThang
+            // 
+            this.textBoxThang.Location = new System.Drawing.Point(151, 391);
+            this.textBoxThang.Name = "textBoxThang";
+            this.textBoxThang.Size = new System.Drawing.Size(77, 20);
+            this.textBoxThang.TabIndex = 96;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 391);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 20);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "Tháng:";
+            // 
+            // dataGridViewLuong
+            // 
+            this.dataGridViewLuong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewLuong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLuong.Location = new System.Drawing.Point(29, 81);
+            this.dataGridViewLuong.Name = "dataGridViewLuong";
+            this.dataGridViewLuong.Size = new System.Drawing.Size(927, 233);
+            this.dataGridViewLuong.TabIndex = 58;
+            this.dataGridViewLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLuong_CellClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(511, 391);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 97;
+            this.label3.Text = "Lương:";
+            // 
+            // textBoxLuong
+            // 
+            this.textBoxLuong.Location = new System.Drawing.Point(651, 391);
+            this.textBoxLuong.Name = "textBoxLuong";
+            this.textBoxLuong.ReadOnly = true;
+            this.textBoxLuong.Size = new System.Drawing.Size(305, 20);
+            this.textBoxLuong.TabIndex = 98;
+            // 
             // DanhSachLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.textBoxMaThoiGian);
+            this.Controls.Add(this.textBoxLuong);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxThang);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxNam);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.buttonQuayLai);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxSoNgayCong);
             this.Controls.Add(this.textBoxMaHopDong);
@@ -176,8 +219,8 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Text = "Bảng lương";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DanhSachLuong_FormClosing);
             this.Load += new System.EventHandler(this.DanhSachLuong_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,14 +230,18 @@ namespace BTL_HuongSuKien_v2.Forms
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewLuong;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxMaHopDong;
         private System.Windows.Forms.TextBox textBoxSoNgayCong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TextBox textBoxMaThoiGian;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonQuayLai;
+        private System.Windows.Forms.TextBox textBoxThang;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxNam;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridViewLuong;
+        private System.Windows.Forms.TextBox textBoxLuong;
+        private System.Windows.Forms.Label label3;
     }
 }

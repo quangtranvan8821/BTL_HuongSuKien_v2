@@ -29,7 +29,6 @@ namespace BTL_HuongSuKien_v2.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonXemChiTiet = new System.Windows.Forms.Button();
             this.comboBoxTenChucVu = new System.Windows.Forms.ComboBox();
             this.labelTenChucVu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,16 +39,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.buttonQuayLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChucVu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonXemChiTiet
-            // 
-            this.buttonXemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXemChiTiet.Location = new System.Drawing.Point(829, 490);
-            this.buttonXemChiTiet.Name = "buttonXemChiTiet";
-            this.buttonXemChiTiet.Size = new System.Drawing.Size(127, 31);
-            this.buttonXemChiTiet.TabIndex = 78;
-            this.buttonXemChiTiet.Text = "Xem chi tiết";
-            this.buttonXemChiTiet.UseVisualStyleBackColor = true;
             // 
             // comboBoxTenChucVu
             // 
@@ -98,7 +87,7 @@ namespace BTL_HuongSuKien_v2.Forms
             // 
             // buttonSua
             // 
-            this.buttonSua.Location = new System.Drawing.Point(665, 490);
+            this.buttonSua.Location = new System.Drawing.Point(798, 490);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(158, 30);
             this.buttonSua.TabIndex = 80;
@@ -144,7 +133,6 @@ namespace BTL_HuongSuKien_v2.Forms
             this.Controls.Add(this.textBoxTienPhuCap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonXemChiTiet);
             this.Controls.Add(this.comboBoxTenChucVu);
             this.Controls.Add(this.labelTenChucVu);
             this.Controls.Add(this.label1);
@@ -160,7 +148,6 @@ namespace BTL_HuongSuKien_v2.Forms
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonXemChiTiet;
         private System.Windows.Forms.ComboBox comboBoxTenChucVu;
         private System.Windows.Forms.Label labelTenChucVu;
         private System.Windows.Forms.Label label1;

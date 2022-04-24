@@ -41,12 +41,6 @@ namespace BTL_HuongSuKien_v2.Forms
             comboBoxTenPhongBan.DataSource = tb;
             comboBoxTenPhongBan.DisplayMember = "ten_phong_ban";
             comboBoxTenPhongBan.ValueMember = "ten_phong_ban";
-
-            /*foreach (DataRow i in tb.Rows)
-            {
-                comboBoxTenPhongBan.Items.Add(i["ten_phong_ban"].ToString());
-            }*/
-            //comboBoxTenPhongBan.SelectedIndex = 0;
         }
 
         private void DanhSachPhongBan_FormClosing(object sender, FormClosingEventArgs e)
