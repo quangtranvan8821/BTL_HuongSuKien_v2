@@ -243,7 +243,7 @@ namespace BTL_HuongSuKien_v2.Forms
                         MessageBox.Show("Xóa không thành công");
                     }
                 }
-                else { MessageBox.Show("OK"); };
+                else { MessageBox.Show("Dừng xóa nhân viên!"); };
             }
             catch (SqlException i)
             {

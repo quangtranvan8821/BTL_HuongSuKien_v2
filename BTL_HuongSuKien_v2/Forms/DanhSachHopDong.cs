@@ -52,13 +52,21 @@ namespace BTL_HuongSuKien_v2.Forms
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.CommandText = @"XoaHopDong";
                 cmd.Parameters.AddWithValue("@id", ma);
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0&&MessageBox.Show("Ban co muon xoa nhan vien nay khong?", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Ban co muon xoa hop dong nay khong?", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    load_dataGridViewHopDong();
-                    MessageBox.Show("Xóa hợp đồng thành công");
+                    int i = cmd.ExecuteNonQuery();
+
+                    if (i > 0)
+                    {
+                        load_dataGridViewHopDong();
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công");
+                    }
                 }
-                else MessageBox.Show("Xóa hợp đồng không thành công");
+                else { MessageBox.Show("Dừng xóa hợp đồng!"); };
             }
             catch (SqlException i)
             {
