@@ -44,11 +44,14 @@ namespace BTL_HuongSuKien_v2.Reports
                 cmd.CommandText = @"ThongKeLuong_ThoiGian";
                 cmd.Parameters.AddWithValue("@thang", comboBoxThang.Text);
                 cmd.Parameters.AddWithValue("@nam", textBoxNam.Text);
+
                 DataTable table = new DataTable();
                 SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
                 sqlData.Fill(table);
+
                 ThongKeLuongTheoThoiGian cry = new ThongKeLuongTheoThoiGian();
                 cry.SetDataSource(table);
+
                 FormLoadReport form = new FormLoadReport();
                 form.crystalReportViewer1.ReportSource = cry;
                 form.ShowDialog();

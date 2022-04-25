@@ -115,5 +115,6 @@ namespace BTL_HuongSuKien_v2.Forms
         {
             Close();
         }
+
     }
 }

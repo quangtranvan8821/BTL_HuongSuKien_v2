@@ -229,13 +229,21 @@ namespace BTL_HuongSuKien_v2.Forms
                 @sdt nvarchar(15),
                 @gioitinh nvarchar(10)*/
 
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0 && MessageBox.Show("Ban co muon xoa nhan vien nay khong?", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                
+                if (MessageBox.Show("Ban co muon xoa nhan vien nay khong?", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    load_dgvNhanvien();
-                    MessageBox.Show("Xóa thành công");
+                    int i = cmd.ExecuteNonQuery();
+
+                    if (i > 0)
+                    {
+                        load_dgvNhanvien();
+                        MessageBox.Show("Xóa thành công");
+                    } else
+                    {
+                        MessageBox.Show("Xóa không thành công");
+                    }
                 }
-                else MessageBox.Show("Xóa không thành công");
+                else { MessageBox.Show("OK"); };
             }
             catch (SqlException i)
             {
